@@ -109,6 +109,10 @@ button:hover {
     background-color: #ddd;
 }
 
+#resume-content{
+    margin-left: 7px;
+}
+
 /* Responsive design */
 @media (max-width: 600px) {
     .container-info, .container-skills, .container-edu, .container-work {

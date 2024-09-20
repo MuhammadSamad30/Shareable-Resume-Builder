@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 function toggleSkills() {
     const skillsContent = document.getElementById('skills-content');
     const toggleButton = document.querySelector('.toggle-button');
@@ -30,7 +31,6 @@ function generateResume() {
         return;
     }
     const resumeContent = `
-        <h2>Generated Resume</h2>
         <h1>Resume</h1>
         <h2>Personal Information</h2>
         <p><strong>Full Name:</strong> ${name}</p>
@@ -81,50 +81,38 @@ function editResume() {
         });
     }
 }
-function downloadResume() {
-    const resumeContent = document.getElementById('resume-content');
-    if (resumeContent) {
-        const printWindow = window.open('', '_blank');
-        if (printWindow) {
-            printWindow.document.write(`
-                <html>
-                    <head>
-                        <title>Resume</title>
-                        <style>
-                            body {
-                                margin: 0;
-                                padding: 20px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
-                            #resume-container {
-                                width: 21cm; 
-                                padding: 20px;
-                                border: 1px solid #000;
-                                box-sizing: border-box;
-                                font-family: Arial, sans-serif;
-                            }
-                            h1, h2, p {
-                                margin: 0;
-                                padding: 10px 0;
-                            }
-                        </style>
-                    </head>
-                    <body>
-                        <div id="resume-container">
-                            ${resumeContent.innerHTML}
-                        </div>
-                    </body>
-                </html>
-            `);
-            printWindow.document.close();
-            printWindow.focus();
-            printWindow.print();
-            printWindow.close();
-        }
+// print section
+(_a = document.getElementById("download-resume-btn")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
+    const hiddenElement = document.getElementById("edit-resume-btn");
+    const hiddenElement1 = document.getElementById("download-resume-btn");
+    const hiddenElement2 = document.getElementById("url-resume-btn");
+    const hiddenElement3 = document.getElementById("shareable-url");
+    if (hiddenElement) {
+        hiddenElement.style.display = "none";
     }
-}
+    if (hiddenElement1) {
+        hiddenElement1.style.display = "none";
+    }
+    if (hiddenElement2) {
+        hiddenElement2.style.display = "none";
+    }
+    if (hiddenElement3) {
+        hiddenElement3.style.display = "none";
+    }
+    window.print();
+    if (hiddenElement) {
+        hiddenElement.style.display = "";
+    }
+    if (hiddenElement1) {
+        hiddenElement1.style.display = "";
+    }
+    if (hiddenElement2) {
+        hiddenElement2.style.display = "";
+    }
+    if (hiddenElement3) {
+        hiddenElement3.style.display = "";
+    }
+});
 // Url section 
 function shareUrl() {
     var _a;

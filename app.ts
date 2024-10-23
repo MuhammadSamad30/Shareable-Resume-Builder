@@ -32,7 +32,7 @@ function generateResume(): void {
     }
 
     const resumeContent: string = `
-        <h1>Resume</h1>
+        <h1>* Resume *</h1>
         <h2>Personal Information</h2>
         <p><strong>Full Name:</strong> ${name}</p>
         <p><strong>Email Address:</strong> ${email}</p>

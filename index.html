@@ -10,7 +10,7 @@
 <body>
     <div class="container-wrapper"> 
         <div id="form-container" class="container-info">
-            <h1>Resume Maker &nbsp; <span><i>Muhammad Samad</i></span></h1>
+            <h1>Resume Maker</h1>
     
             <section class="personal information">
                 <h2>Personal Information</h2>
@@ -85,15 +85,17 @@
                 </section>
             </div>
     
-            <button id="generate-resume-btn" onclick="generateResume()">Generate Resume</button>
+            <button onclick="generateResume()">Generate Resume</button>
         </div>
     
         <div class="container-resume">
             <div id="resume-content"></div>
-            <button id="edit-resume-btn" style="display: none;" onclick="editResume()">Edit Resume</button>
-            <button id="download-resume-btn" style="display: none;" onclick="downloadResume()">Download as Pdf</button>
-            <input type="text" id="shareable-url" style="display: none;" readonly>            
-            <button id="url-resume-btn" style="display: none;" onclick="shareUrl()">Copy Link <i class='bx bx-copy-alt bx-flashing'></i></button>
+            <div id="resume-actions">
+                <button id="edit-resume-btn" style="display: none;" onclick="editResume()">Edit</button>
+                <button id="download-resume-btn" style="display: none;" onclick="downloadResume()">Download</button>
+                <button id="url-resume-btn" style="display: none;" onclick="shareUrl()">Copy Link</button>
+            </div>
+            <input type="text" id="shareable-url" style="display: none;" readonly>
         </div>
     </div>
 

@@ -91,21 +91,7 @@ function editResume(): void {
 // print section
 
 document.getElementById("download-resume-btn")?.addEventListener("click", function() {
-    const hiddenElement = document.getElementById("edit-resume-btn")
-    const hiddenElement1 = document.getElementById("download-resume-btn")
-    const hiddenElement2 = document.getElementById("url-resume-btn")
-    const hiddenElement3 = document.getElementById("shareable-url")
-
-    if (hiddenElement) {hiddenElement.style.display = "none";}
-    if (hiddenElement1){ hiddenElement1.style.display = "none";}
-    if (hiddenElement2){ hiddenElement2.style.display = "none";}
-    if (hiddenElement3){ hiddenElement3.style.display = "none";}
     window.print(); 
-
-    if (hiddenElement) {hiddenElement.style.display = "";}
-    if (hiddenElement1){ hiddenElement1.style.display = "";}
-    if (hiddenElement2){ hiddenElement2.style.display = "";}
-    if (hiddenElement3){ hiddenElement3.style.display = "";}
 });
 
 // Url section 

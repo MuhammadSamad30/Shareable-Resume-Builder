@@ -1,5 +1,4 @@
 "use strict";
-var _a;
 const background = document.querySelector('.background');
 const numberOfSpans = 300;
 for (let i = 0; i < numberOfSpans; i++) {
@@ -109,9 +108,9 @@ function editResume() {
     }
 }
 // print section
-(_a = document.getElementById("download-resume-btn")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
+function downloadResume() {
     window.print();
-});
+}
 // Url section 
 function shareUrl() {
     var _a;

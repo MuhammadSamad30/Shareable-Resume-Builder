@@ -123,9 +123,9 @@ function editResume(): void {
 
 // print section
 
-document.getElementById("download-resume-btn")?.addEventListener("click", function() {
-    window.print(); 
-});
+function downloadResume(): void {
+    window.print();
+}
 
 // Url section 
 

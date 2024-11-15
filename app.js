@@ -1,5 +1,23 @@
 "use strict";
 var _a;
+const background = document.querySelector('.background');
+const numberOfSpans = 300;
+for (let i = 0; i < numberOfSpans; i++) {
+    const span = document.createElement('span');
+    const x = Math.random() * 100;
+    const delay = Math.random() * 1;
+    const duration = Math.random() * 5 + 5;
+    span.style.left = `${x}vw`;
+    span.style.animationDelay = `${delay}s`;
+    span.style.animationDuration = `${duration}s`;
+    background.appendChild(span);
+}
+function goTo() {
+    window.location.href = "main.html";
+}
+function goBack() {
+    window.location.href = "index.html";
+}
 function toggleSkills() {
     const skillsContent = document.getElementById('skills-content');
     const toggleButton = document.querySelector('.toggle-button');

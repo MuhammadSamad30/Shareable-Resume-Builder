@@ -3,109 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>Sharable-Resume-Maker</title>
+    <title>Shareable-Resume-Maker</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container-wrapper"> 
-        <div id="form-container" class="container-info">
-            <h1>Resume Maker</h1>
-    
-            <section class="personal information">
-                <h2>Personal Information</h2>
-        
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" placeholder="Enter your Fullname" >
-        
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" placeholder="Enter your Email Address">
-        
-                <label for="number">Contact Number:</label>
-                <input type="number" id="number" placeholder="Enter your Contact Number">
-        
-                <label for="city">Select Your City:</label>
-                <div>
-                    <input type="radio" id="karachi" name="city" value="Karachi">
-                    <label for="karachi">Karachi</label>
-                </div>
-                <div>
-                    <input type="radio" id="lahore" name="city" value="Lahore">
-                    <label for="lahore">Lahore</label>
-                </div>
-                <div>
-                    <input type="radio" id="islamabad" name="city" value="Islamabad">
-                    <label for="islamabad">Islamabad</label>
-                </div>
-                <div>
-                    <input type="radio" id="punjab" name="city" value="Punjab">
-                    <label for="punjab">Punjab</label>
-                </div>
-            </section>
-    
-            <div class="container-skills">
-                <section id="skills-section">
-                    <h2>Skills</h2>
-                    <div id="skills-content">
-                        <label for="Skills">List Your Skills:</label>
-                        <input type="text" id="Skills" placeholder="Enter your skills separated by commas">
-                    </div>
-                    <button class="toggle-button" onclick="toggleSkills()">Hide Skills</button>
-                </section>
-            </div>
-    
-            <div class="container-edu">
-                <section id="education-section">
-                    <h2>Education</h2>
-                    <label for="degree">Degree:</label>
-                    <input type="text" id="degree" placeholder="Enter your degree" required>
-    
-                    <label for="university">University:</label>
-                    <input type="text" id="university" placeholder="Enter your university" required>
-    
-                    <label for="graduation-date">Graduation Date:</label>
-                    <input type="date" id="graduation-date" placeholder="Select graduation date" required>
-                </section>
-            </div>
-    
-            <div class="container-work">
-                <section id="work-experience-section">
-                    <h2>Work Experience</h2>
-                    <label for="job-title">Job Title:</label>
-                    <input type="text" id="job-title" placeholder="Enter your job title" required>
-    
-                    <label for="company-name">Company Name:</label>
-                    <input type="text" id="company-name" placeholder="Enter company name" required>
-    
-                    <label for="start-date">Start Date:</label>
-                    <input type="date" id="start-date" required>
-    
-                    <label for="end-date">End Date:</label>
-                    <input type="date" id="end-date" required>
-                </section>
-                
-            <label for="imageUplaod" class="file-upload-label"> Select Your Image
-                <input type="file" name="imageUplaod" id="imageUplaod" accept="image/*" hidden>
-            </label>
-            </div>
-    
-            <button onclick="generateResume()">Generate Resume</button>
-        </div>
-    
-        <div class="container-resume">
-            <div id="resume-content"></div>
-            <div id="resume-actions">
-                <button id="edit-resume-btn" style="display: none;" onclick="editResume()">Edit</button>
-                <button id="download-resume-btn" style="display: none;" onclick="downloadResume()">Download</button>
-                <button id="url-resume-btn" style="display: none;" onclick="shareUrl()">Copy Link</button>
-            </div>
-            <input type="text" id="shareable-url" style="display: none;" readonly>
+    <div class="background"></div>
+
+    <div class="content">
+        <h1>Developed By Muhammad Samad</h1>
+        <div class="resume-maker">
+            <h2>Resume Maker</h2>
+            <p>1. <strong>Resume Generator</strong>: Quickly create and customize your professional resume by filling in personal details, skills, education, and work experience.</p>
+            <p>2. <strong>Edit Option</strong>: Easily update or modify your resume with a simple edit interface for each section.</p>
+            <p>3. <strong>Download and Share</strong>: Download your resume as a PDF for easy printing or sharing, or generate a custom URL to share it directly with others.</p>
+            <button onclick="goTo()">Create Resume</button>
         </div>
     </div>
 
     <script src="app.js"></script>
 </body>
 </html>
-
-
-

@@ -2,9 +2,53 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f0d1d1;
     color: #333;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+  }
+  
+  .back-button {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      color: #333;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+  
+  &:hover{
+    color: #666;
+  }    
+  }
+  
+  .back-button i {
+      font-size: 25px;
+      margin-right: 5px;
+  }
 
 .container-wrapper {
     max-width: 900px;
@@ -65,7 +109,8 @@ input[type="radio"] {
     background-color: #f9f9f9;
 }
 
-button {
+.toggle-button,
+.genBtn {
   background-color: #fff000;
   border-radius: 12px;
   color: #000000;
@@ -82,12 +127,12 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-}
-
-button:hover {
-  outline: 0;
-  background: #f4e603;
-  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+  
+  &:hover {
+    outline: 0;
+    background: #f4e603;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+  }
 }
 #resume-actions {
     display: flex;
